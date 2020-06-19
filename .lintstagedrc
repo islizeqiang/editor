@@ -1,0 +1,10 @@
+{
+  "**/*.{js,jsx,ts,tsx}": "eslint --ext .js,.jsx,.ts,.tsx",
+  "**/*.less": "stylelint --syntax less",
+  "**/*.{js,jsx,tsx,ts,less,md,json}": [
+    "prettier --write"
+  ],
+  "**/*.ts?(x)": [
+    "prettier --parser=typescript --write"
+  ]
+}

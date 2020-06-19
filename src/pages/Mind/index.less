@@ -1,0 +1,60 @@
+// @import '~antd/es/style/themes/default.less';
+
+.editor {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  width: 100%;
+  // height: calc(100vh - 250px);
+  height: 100vh;
+  overflow: hidden;
+  background: rgb(235, 235, 235);
+}
+
+.editorHd {
+  padding: 8px;
+  background: rgb(250, 250, 250);
+  // border: 1px solid @item-active-bg;
+  border-bottom: 1px solid #ddd;
+}
+
+.editorBd {
+  flex: 1;
+}
+
+.editorSidebar,
+.editorContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.editorContent {
+  :global {
+    .graph-container canvas {
+      vertical-align: middle;
+    }
+  }
+}
+
+.editorSidebar {
+  background: rgb(250, 250, 250);
+  :global {
+    .g6-editor-minimap-container {
+      background: none !important ;
+    }
+  }
+  // &:first-child {
+  //   border-right: 1px solid @item-active-bg;
+  // }
+
+  &:last-child {
+    border-left: 1px solid #ddd;
+    // border-left: 1px solid @item-active-bg;
+  }
+}
+
+.flow,
+.mind,
+.koni {
+  flex: 1;
+}
