@@ -7,7 +7,6 @@ import { MindContextMenu } from '@/components/EditorContextMenu';
 import { MindDetailPanel } from '@/components/EditorDetailPanel';
 import { MindToolbar } from '@/components/EditorToolbar';
 
-import data1 from './worldCup2018.json';
 import styles from './index.less';
 
 GGEditor.setTrackable(false);
@@ -21,23 +20,21 @@ const generatorOperator = (fileName: string) => {
   return null;
 };
 
-const fileOperator = generatorOperator('worldCup2018');
+const fileOperator = generatorOperator('myMind');
 
 const Index = () => {
-  const [data, setData] = useState(data1);
+  const [data, setData] = useState(null);
 
   useEffect(() => {
     if (fileOperator) {
       const fileData = fileOperator.read();
-
       setData(JSON.parse(fileData));
     }
   }, []);
 
-  const save = (data23: any) => {
+  const save = (saveData: any) => {
     if (fileOperator) {
-      fileOperator.write(JSON.stringify(data23));
-      // setData(JSON.parse(fileData))
+      fileOperator.write(JSON.stringify(saveData));
     }
   };
 
@@ -50,7 +47,7 @@ const Index = () => {
       </Row>
       <Row className={styles.editorBd}>
         <Col span={20} className={styles.editorContent}>
-          <Mind data={data} className={styles.mind} />
+          {!!data && <Mind data={data} className={styles.mind} />}
         </Col>
         <Col span={4} className={styles.editorSidebar}>
           <MindDetailPanel />

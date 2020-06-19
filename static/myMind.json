@@ -1,0 +1,142 @@
+{
+  "roots": [
+    {
+      "label": "法国",
+      "children": [
+        {
+          "label": "11",
+          "side": "left",
+          "children": [
+            {
+              "label": "克罗地亚",
+              "children": [
+                {
+                  "label": "克罗地亚",
+                  "children": [
+                    { "label": "克罗地亚", "side": "left", "id": "291c9efa" },
+                    { "label": "丹麦", "side": "left", "id": "264aa61e" }
+                  ],
+                  "side": "left",
+                  "id": "f7994394"
+                },
+                {
+                  "label": "俄罗斯",
+                  "children": [
+                    { "label": "俄罗斯", "side": "left", "id": "334e89c9" },
+                    { "label": "西班牙", "side": "left", "id": "5d90157e" }
+                  ],
+                  "side": "left",
+                  "id": "d01fc666"
+                }
+              ],
+              "side": "left",
+              "id": "d7446f54"
+            },
+            {
+              "label": "英格兰",
+              "children": [
+                {
+                  "label": "英格兰",
+                  "children": [
+                    { "label": "英格兰", "side": "left", "id": "a47befdc" },
+                    { "label": "哥伦比亚", "side": "left", "id": "413231fa" }
+                  ],
+                  "side": "left",
+                  "id": "d3c50d81"
+                },
+                {
+                  "label": "瑞典",
+                  "children": [
+                    { "label": "瑞士", "side": "left", "id": "298bf0ce" },
+                    { "label": "瑞典", "side": "left", "id": "f1e323d8" }
+                  ],
+                  "side": "left",
+                  "id": "cefc363f"
+                }
+              ],
+              "side": "left",
+              "id": "b59c5cb8"
+            }
+          ],
+          "id": "f537d8e7",
+          "collapsed": false
+        },
+        {
+          "label": "88888",
+          "side": "right",
+          "children": [
+            {
+              "label": "法国",
+              "children": [
+                {
+                  "label": "法国",
+                  "children": [
+                    {
+                      "label": "自执行函数?用于什么场景？好处?自执行函数:1、声明一个匿名函数 2、马上调用这个匿名函数。作用：创建一个独立的作用域。好处：防止变量弥散到全局，以免各种 js 库冲突。隔离作用域避免污染，或者截断作用域链，避免闭包造成引用变量无法释放。利用立即执行特性，返回需要的业务函数或对象，避免每次通过条件判断来处理场景：一般用于框架、插件等场景",
+                      "side": "right",
+                      "id": "122ab03b"
+                    },
+                    { "label": "阿根廷", "side": "right", "id": "e655eaf1" }
+                  ],
+                  "side": "right",
+                  "id": "6b04c239",
+                  "collapsed": true
+                },
+                {
+                  "label": "乌拉圭",
+                  "children": [
+                    { "label": "乌拉圭", "side": "right", "id": "f2678a32", "children": [] }
+                  ],
+                  "side": "right",
+                  "id": "a3051cd3",
+                  "collapsed": false
+                }
+              ],
+              "side": "right",
+              "id": "01056e70"
+            },
+            {
+              "label": "23",
+              "children": [
+                {
+                  "label": "比利时",
+                  "children": [
+                    {
+                      "label": "比利时",
+                      "side": "right",
+                      "id": "6af59d8e",
+                      "children": [
+                        {
+                          "label": "1. 在调用函数时使用`new`关键字，函数内的`this`是一个全新的对象。2. 如果`apply`、`call`或`bind`方法用于调用、创建一个函数，函数内的 this 就是作为参数传入这些方法的对象。3. 当函数作为对象里的方法被调用时，函数内的`this`是调用该函数的对象。比如当`obj.method()`被调用时，函数内的 this 将绑定到`obj`对象。4. 如果调用函数不符合上述规则，那么`this`的值指向全局对象（global object）。浏览器环境下`this`的值指向`window`对象，但是在严格模式下(`'use strict'`)，`this`的值为`undefined`。5. 如果符合上述多个规则，则较高的规则（1 号最高，4 号最低）将决定`this`的值。6. 如果该函数是 ES2015 中的箭头函数，将忽略上面的所有规则，`this`被设置为它被创建时的上下文。",
+                          "id": "44dd1740",
+                          "side": "right"
+                        }
+                      ],
+                      "collapsed": true
+                    },
+                    { "label": "日本", "side": "right", "id": "87449145" }
+                  ],
+                  "side": "right",
+                  "id": "d3c27206"
+                },
+                {
+                  "label": "巴西",
+                  "children": [
+                    { "label": "巴西", "side": "right", "id": "a8e64531" },
+                    { "label": "墨西哥", "side": "right", "id": "b46ec8f1" }
+                  ],
+                  "side": "right",
+                  "id": "c4079066"
+                }
+              ],
+              "side": "right",
+              "id": "e1f379ce"
+            }
+          ],
+          "id": "8b320d18"
+        }
+      ],
+      "id": "e7d182fc"
+    }
+  ]
+}
