@@ -4,5 +4,7 @@
 /config
 .history
 /release
-/public
+/src/renderer/public
 /build
+
+/src/main

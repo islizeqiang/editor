@@ -1,0 +1,4 @@
+main:
+  sourceDirectory: 'src/main'
+renderer:
+  sourceDirectory: null

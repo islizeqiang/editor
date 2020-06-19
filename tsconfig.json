@@ -17,9 +17,18 @@
     "experimentalDecorators": true,
     "strict": true,
     "paths": {
-      "@/*": ["./src/*"],
-      "@@/*": ["./src/.umi/*"]
+      "@/*": ["./src/renderer/*"],
+      "@@/*": ["./src/renderer/.umi/*"]
     }
   },
-  "exclude": ["node_modules", "build", "dist", "scripts", "src/.umi/*", "webpack", "jest"]
+  "exclude": [
+    "node_modules",
+    "build",
+    "dist",
+    "scripts",
+    "src/renderer/.umi/*",
+    "./.umi/*",
+    "webpack",
+    "jest"
+  ]
 }

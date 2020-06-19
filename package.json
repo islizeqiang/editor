@@ -1,8 +1,23 @@
 {
+  "name": "editor",
+  "version": "1.0.0",
   "private": true,
+  "keywords": [
+    "typescript",
+    "electron",
+    "react",
+    "node",
+    "umi"
+  ],
   "scripts": {
-    "start": "umi dev",
-    "build": "umi build",
+    "start": "concurrently \"npm run start:renderer\" \"wait-on http://localhost:8011 && npm run start:main\"",
+    "start:main": "electron-webpack dev",
+    "start:renderer": "cross-env BROWSER=none APP_ROOT=src/renderer umi dev",
+    "start:web": "cross-env IS_WEB=true APP_ROOT=src/renderer umi dev",
+    "build": "webpack --config build/webpack.main.config.js && cross-env APP_ROOT=src/renderer umi build",
+    "package-win": "npm run build && electron-builder --win --x64",
+    "package-mac": "npm run build && electron-builder --mac --x64",
+    "package-linux": "npm run build && electron-builder --linux --x64",
     "lint:fix": "npm run lint-fix:js && npm run lint-fix:style",
     "lint-fix:js": "eslint --fix --ext .js,.jsx,.ts,.tsx --format=pretty ./src",
     "lint-fix:style": "stylelint --fix \"src/**/*.less\" --syntax less",
@@ -24,11 +39,19 @@
     "@types/react-dom": "^16.9.8",
     "@umijs/fabric": "^2.1.0",
     "@umijs/preset-react": "^1.5.3",
+    "awesome-typescript-loader": "^5.2.1",
+    "concurrently": "^5.2.0",
     "cross-env": "^7.0.0",
+    "electron": "8.2.3",
+    "electron-builder": "22.5.1",
+    "electron-webpack": "^2.8.2",
+    "electron-webpack-ts": "^4.0.1",
     "eslint": "^7.2.0",
     "husky": "^4.0.7",
     "lint-staged": "^10.2.6",
     "prettier": "^2.0.5",
-    "stylelint": "^13.3.3"
+    "stylelint": "^13.3.3",
+    "wait-on": "^5.0.1",
+    "webpack": "^4.43.0"
   }
 }
