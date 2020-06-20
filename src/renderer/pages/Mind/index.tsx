@@ -4,8 +4,8 @@ import GGEditor, { Mind } from 'gg-editor';
 
 import { MindContextMenu } from '@/components/EditorContextMenu';
 import { MindToolbar } from '@/components/EditorToolbar';
-import EditorMinimap from '@/components/EditorMinimap';
-import { MindDetailPanel } from '@/components/EditorDetailPanel';
+// import EditorMinimap from '@/components/EditorMinimap';
+// import { MindDetailPanel } from '@/components/EditorDetailPanel';
 
 import styles from './index.less';
 
@@ -51,13 +51,13 @@ const Index = () => {
         </Col>
       </Row>
       <Row className={styles.editorBd}>
-        <Col span={20} className={styles.editorContent}>
+        <Col span={24} className={styles.editorContent}>
           {!!data && <Mind data={data} className={styles.mind} />}
         </Col>
-        <Col span={4} className={styles.editorSidebar}>
+        {/* <Col span={4} className={styles.editorSidebar}>
           <MindDetailPanel />
           <EditorMinimap />
-        </Col>
+        </Col> */}
       </Row>
       <MindContextMenu />
     </GGEditor>

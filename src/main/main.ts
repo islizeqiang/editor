@@ -20,8 +20,8 @@ const createWindow = () => {
     height: 1080,
     // resizable: false,
     // fullscreen: true,
-    frame: false,
-    titleBarStyle: 'hidden',
+    // frame: false,
+    // titleBarStyle: 'hidden',
     webPreferences: {
       nodeIntegration: true,
     },

@@ -46,7 +46,7 @@
     "electron-builder": "22.5.1",
     "electron-webpack": "^2.8.2",
     "electron-webpack-ts": "^4.0.1",
-    "eslint": "^7.2.0",
+    "eslint": "7.2.0",
     "husky": "^4.0.7",
     "lint-staged": "^10.2.6",
     "prettier": "^2.0.5",
