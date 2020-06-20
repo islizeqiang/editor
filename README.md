@@ -1,6 +1,10 @@
-# Editor ![language](https://img.shields.io/badge/language-typescript-blue.svg) ![Travis](https://img.shields.io/badge/react-16.12.0-blue) ![Travis](https://img.shields.io/badge/umi-3.2.2-blue) ![Travis](https://img.shields.io/badge/antd-4.2.5-blue)
+# Editor ![language](https://img.shields.io/badge/language-typescript-blue.svg) ![Travis](https://img.shields.io/badge/react-16.12.0-blue) ![Travis](https://img.shields.io/badge/umi-3.2.2-blue) ![Travis](https://img.shields.io/badge/electron-8.2.3-blue) ![Travis](https://img.shields.io/badge/antd-4.2.5-blue)
 
-> 脑图编辑器及流程编辑器
+> 脑图编辑器，用熟悉的数据结构保存自己的知识体系。
+
+## 预览
+
+<img src="images/2020-6-20.png" style="zoom:80%;" />
 
 ## :books: 目录
 

@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { Col, Row } from 'antd';
 import GGEditor, { Mind } from 'gg-editor';
 
-import EditorMinimap from '@/components/EditorMinimap';
 import { MindContextMenu } from '@/components/EditorContextMenu';
-import { MindDetailPanel } from '@/components/EditorDetailPanel';
 import { MindToolbar } from '@/components/EditorToolbar';
+import EditorMinimap from '@/components/EditorMinimap';
+import { MindDetailPanel } from '@/components/EditorDetailPanel';
 
 import styles from './index.less';
 
