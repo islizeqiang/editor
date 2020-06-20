@@ -1,10 +1,16 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import { app, BrowserWindow } from 'electron';
-import FileOperator from './reader';
+import FileOperator from './file';
+
+interface CustomApp extends Electron.App {
+  FileOperator?: any;
+}
+
+const customApp: CustomApp = app;
 
 const isDev = process.env.NODE_ENV === 'development';
 
-app.FileOperator = FileOperator;
+customApp.FileOperator = FileOperator;
 
 let mainWindow: Electron.BrowserWindow | null;
 
@@ -32,15 +38,15 @@ const createWindow = () => {
   });
 };
 
-app.on('ready', createWindow);
+customApp.on('ready', createWindow);
 
-app.on('window-all-closed', () => {
+customApp.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
-    app.quit();
+    customApp.quit();
   }
 });
 
-app.on('activate', () => {
+customApp.on('activate', () => {
   if (mainWindow === null) {
     createWindow();
   }

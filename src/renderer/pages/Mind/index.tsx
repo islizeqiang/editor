@@ -14,7 +14,6 @@ GGEditor.setTrackable(false);
 const generatorOperator = (fileName: string) => {
   if (window.electron) {
     const { FileOperator } = window.electron.remote.app;
-
     return new FileOperator(fileName);
   }
   return null;

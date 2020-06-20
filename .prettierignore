@@ -1,0 +1,16 @@
+.umi
+.umi-production
+.dockerignore
+.DS_Store
+.eslintignore
+*.png
+*.toml
+docker
+.prettierignore
+.eslintcache
+*.lock
+yarn-error.log
+.history
+/dist
+/static
+/release
