@@ -5,13 +5,12 @@ import ToolbarButton from './ToolbarButton';
 import SaveButton from './SaveButton';
 import styles from './index.less';
 
-type Save = (data: any) => void;
-
 interface FlowToolbarProps {
-  save: Save;
+  save: (data: any) => void;
+  isWeb: boolean;
 }
 
-const FlowToolbar: React.FC<FlowToolbarProps> = ({ save }) => (
+const FlowToolbar: React.FC<FlowToolbarProps> = ({ save, isWeb }) => (
   <Toolbar className={styles.toolbar}>
     <ToolbarButton command="undo" />
     <ToolbarButton command="redo" />
@@ -27,7 +26,7 @@ const FlowToolbar: React.FC<FlowToolbarProps> = ({ save }) => (
     <ToolbarButton command="collapse" text="Fold" />
     <ToolbarButton command="expand" text="Unfold" />
     <Divider type="vertical" />
-    <SaveButton save={save} />
+    <SaveButton save={save} isWeb={isWeb} />
   </Toolbar>
 );
 

@@ -11,37 +11,43 @@ import styles from './index.less';
 
 GGEditor.setTrackable(false);
 
-const generatorOperator = (fileName: string) => {
-  if (window.electron) {
-    const { FileOperator } = window.electron.remote.app;
-    return new FileOperator(fileName);
-  }
-  return null;
+const isWeb = !window.electron;
+
+const fileName = 'myMind';
+
+const getFileOperator = (name: string) => {
+  if (isWeb) return null;
+  const { FileOperator } = window.electron.remote.app;
+  return new FileOperator(name);
 };
 
-const fileOperator = generatorOperator('myMind');
+const fileOperator = getFileOperator(fileName);
 
 const Index = () => {
   const [data, setData] = useState(null);
 
-  useEffect(() => {
-    if (fileOperator) {
+  const read = () => {
+    if (!isWeb) {
       const fileData = fileOperator.read();
       setData(JSON.parse(fileData));
     }
-  }, []);
+  };
 
   const save = (saveData: any) => {
-    if (fileOperator) {
+    if (!isWeb) {
       fileOperator.write(JSON.stringify(saveData));
     }
   };
+
+  useEffect(() => {
+    read();
+  }, []);
 
   return (
     <GGEditor className={styles.editor}>
       <Row className={styles.editorHd}>
         <Col span={24}>
-          <MindToolbar save={save} />
+          <MindToolbar save={save} isWeb={isWeb} />
         </Col>
       </Row>
       <Row className={styles.editorBd}>
