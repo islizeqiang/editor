@@ -12,7 +12,7 @@ const headScripts = IS_WEB
 
 export default defineConfig({
   history: {
-    type: 'memory',
+    type: 'hash',
   },
   hash: true,
   publicPath: './',
